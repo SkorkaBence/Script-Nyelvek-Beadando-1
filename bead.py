@@ -21,7 +21,7 @@ class Szamla:
             i = i + 1
         self.name = name[:-1]
         self.lastchage = words[i]
-        if (words[i + 1][-1] == " " || words[i + 1][:-1] == "\n"):
+        if (words[i + 1][-1] == " " or words[i + 1][:-1] == "\n"):
             self.ballance = int(words[i + 1][:-1])
         else:
             self.ballance = int(words[i + 1])
