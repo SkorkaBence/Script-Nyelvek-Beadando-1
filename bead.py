@@ -21,15 +21,10 @@ class Szamla:
             i = i + 1
         self.name = name[:-1]
         self.lastchage = words[i]
-        self.ballance = int(words[i + 1][:-1])
-    def getAccountId(self):
-        return self.accountid
-    def getName(self):
-        return self.name
-    def getBallance(self):
-        return self.ballance
-    def getLastChange(self):
-        return self.ballance
+        if (words[i + 1][-1] == " " || words[i + 1][:-1] == "\n"):
+            self.ballance = int(words[i + 1][:-1])
+        else:
+            self.ballance = int(words[i + 1])
     def toString(self):
         stri = self.accountid + " " + self.name + " " + self.lastchage + " " + str(self.ballance)
         return stri
